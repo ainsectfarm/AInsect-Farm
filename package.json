@@ -1,0 +1,16 @@
+{
+  "name": "ainsekt-farm",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "dev":   "turbo dev",
+    "build": "turbo build",
+    "lint":  "turbo lint",
+    "web":   "pnpm --filter web dev",
+    "api":   "pnpm --filter api dev"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  }
+}
