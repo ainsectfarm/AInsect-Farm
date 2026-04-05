@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 .pnpm-store/
+pnpm-lock.yaml
 
 # Next.js
 .next/
@@ -9,8 +10,10 @@ out/
 # Python
 __pycache__/
 *.pyc
+*.pyo
 venv/
 .env
+.env.local
 
 # Build
 dist/
@@ -19,3 +22,4 @@ build/
 # OS
 .DS_Store
 *.log
+Thumbs.db
