@@ -1,5 +1,8 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel, EmailStr
+from fastapi import APIRouter, HTTPException, Depends
+from pydantic import BaseModel
+from sqlalchemy.orm import Session
+from app.database import get_db
+from app.models import User
 from enum import Enum
 
 router = APIRouter(prefix="/users", tags=["users"])
@@ -15,41 +18,39 @@ class UserCreate(BaseModel):
     name: str
     email: str
     user_type: UserType
-    location: str = ""
+    lat: float = 0.0
+    lng: float = 0.0
 
-class User(BaseModel):
+class UserResponse(BaseModel):
     id: int
     name: str
     email: str
-    user_type: UserType
-    green_points: int = 0
-    ains_tokens: float = 0.0
+    user_type: str
+    green_points: int
+    ains_tokens: float
+    class Config:
+        from_attributes = True
 
-# Tymczasowa baza w pamięci (potem PostgreSQL)
-users_db = []
-counter = {"id": 1}
-
-@router.post("/register", response_model=User)
-def register(user: UserCreate):
+@router.post("/register", response_model=UserResponse)
+def register(user: UserCreate, db: Session = Depends(get_db)):
+    existing = db.query(User).filter(User.email == user.email).first()
+    if existing:
+        raise HTTPException(400, "Email already registered")
     new_user = User(
-        id=counter["id"],
-        name=user.name,
-        email=user.email,
-        user_type=user.user_type,
-        green_points=100,  # bonus na start
-        ains_tokens=0.0
+        name=user.name, email=user.email,
+        user_type=user.user_type, lat=user.lat, lng=user.lng,
+        green_points=100, ains_tokens=0.0
     )
-    users_db.append(new_user)
-    counter["id"] += 1
+    db.add(new_user); db.commit(); db.refresh(new_user)
     return new_user
 
-@router.get("/", response_model=list[User])
-def get_users():
-    return users_db
+@router.get("/", response_model=list[UserResponse])
+def get_users(db: Session = Depends(get_db)):
+    return db.query(User).all()
 
-@router.get("/{user_id}", response_model=User)
-def get_user(user_id: int):
-    user = next((u for u in users_db if u.id == user_id), None)
+@router.get("/{user_id}", response_model=UserResponse)
+def get_user(user_id: int, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.id == user_id).first()
     if not user:
         raise HTTPException(404, "User not found")
     return user
