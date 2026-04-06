@@ -1,3 +1,5 @@
+import os
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -9,13 +11,14 @@ class Settings(BaseSettings):
     debug: bool = False
 
     # Database
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/ainsekt"
+    database_url: str = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/ainsekt")
 
     # Redis
     redis_url: str = "redis://localhost:6379/0"
 
     # Auth
-    secret_key: str = "change-me-in-production"
+    secret_key: str = os.getenv("SECRET_KEY", "change-me-in-production")
+    algorithm: str = "HS256"
     access_token_expire_minutes: int = 60 * 24  # 24h
 
 

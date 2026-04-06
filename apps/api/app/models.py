@@ -7,6 +7,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable=False)
     email = Column(String(150), unique=True, nullable=False)
+    password_hash = Column(String(255), nullable=True)  # nullable for existing users
     user_type = Column(String(20), nullable=False)
     green_points = Column(Integer, default=100)
     ains_tokens = Column(Float, default=0.0)
