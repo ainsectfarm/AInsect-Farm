@@ -288,7 +288,7 @@ export default function Home() {
           <h2 className="text-5xl font-black tracking-tight mb-12">Community first. <span className="text-[#00FF88]">Then token. Then farm.</span></h2>
           <div className="grid md:grid-cols-5 gap-4">
             {roadmap.map(([period,title,desc,done],i)=>(
-              <div key={title} className="relative">
+              <div key={String(title)} className="relative">
                 <div className={`w-4 h-4 rounded-full border-2 mb-4 ${done?"bg-[#00FF88] border-[#00FF88]":"bg-[#050508] border-[#666677]"}`}/>
                 <div className="font-mono text-[#00FF88] text-xs tracking-widest uppercase mb-2">{period}</div>
                 <div className="font-black text-lg mb-3">{title}</div>

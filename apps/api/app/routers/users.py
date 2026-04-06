@@ -60,7 +60,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
-    token = create_access_token({"sub": new_user.id})
+    token = create_access_token({"sub": str(new_user.id)})
     return TokenResponse(access_token=token, user=UserResponse.model_validate(new_user))
 
 
@@ -69,7 +69,7 @@ def login(form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get
     user = db.query(User).filter(User.email == form.username).first()
     if not user or not user.password_hash or not verify_password(form.password, user.password_hash):
         raise HTTPException(401, "Invalid email or password")
-    token = create_access_token({"sub": user.id})
+    token = create_access_token({"sub": str(user.id)})
     return TokenResponse(access_token=token, user=UserResponse.model_validate(user))
 
 
