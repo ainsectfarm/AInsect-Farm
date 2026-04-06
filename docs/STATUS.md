@@ -1,7 +1,7 @@
 # AInsekt Farm — Project Status
 
-**Last updated:** 2026-04-06
-**Version:** 1.2.0
+**Last updated:** 2026-04-06 (final check)
+**Version:** 1.2.1
 
 ---
 
@@ -95,9 +95,16 @@ FLIK App sub-components:
 - **Tables:** users, waste_reports, products, reservations, greenpoints_transactions
 - **Column `password_hash`:** PRESENT in users table
 
+### Vercel Deployment — FIXED
+
+- `packageManager` downgraded to `pnpm@9.15.4` (Vercel-compatible)
+- `engines.node >= 20.0.0` enforced
+- `.npmrc` with `node-linker=hoisted` for monorepo compatibility
+- `pnpm-lock.yaml` regenerated (lockfileVersion 9.0)
+
 ### Git Repository — CLEAN
 
-- 10 commits on `main`
+- 12 commits on `main`, pushed to GitHub
 - Working tree clean
 - `.env` files removed from history (filter-branch applied)
 - `refs/original` backup refs deleted
