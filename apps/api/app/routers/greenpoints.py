@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from app.database import get_db
 from app.models import User, GreenPointsTransaction
+from app.auth import get_current_user
 
 router = APIRouter(prefix="/greenpoints", tags=["greenpoints"])
 
@@ -19,7 +20,9 @@ class ConvertToAINS(BaseModel):
     points_to_convert: int
 
 @router.post("/earn")
-def earn_points(tx: PointsTransaction, db: Session = Depends(get_db)):
+def earn_points(tx: PointsTransaction, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if current_user.id != tx.user_id:
+        raise HTTPException(403, "Cannot earn points for another user")
     user = db.query(User).filter(User.id == tx.user_id).first()
     if not user:
         raise HTTPException(404, "User not found")
@@ -33,7 +36,7 @@ def earn_points(tx: PointsTransaction, db: Session = Depends(get_db)):
             "new_balance": user.green_points}
 
 @router.get("/balance/{user_id}")
-def get_balance(user_id: int, db: Session = Depends(get_db)):
+def get_balance(user_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     user = db.query(User).filter(User.id == user_id).first()
     if not user:
         raise HTTPException(404, "User not found")
@@ -43,7 +46,9 @@ def get_balance(user_id: int, db: Session = Depends(get_db)):
             "points_to_next_ains": CONVERSION_RATE - (user.green_points % CONVERSION_RATE)}
 
 @router.post("/convert")
-def convert_to_ains(req: ConvertToAINS, db: Session = Depends(get_db)):
+def convert_to_ains(req: ConvertToAINS, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if current_user.id != req.user_id:
+        raise HTTPException(403, "Cannot convert points for another user")
     user = db.query(User).filter(User.id == req.user_id).first()
     if not user:
         raise HTTPException(404, "User not found")

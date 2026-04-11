@@ -11,11 +11,14 @@ out/
 
 # Python
 __pycache__/
+**/__pycache__/
 *.pyc
+**/*.pyc
 *.pyo
 venv/
 .env
 .env.local
+.env.docker
 
 # Build
 dist/
