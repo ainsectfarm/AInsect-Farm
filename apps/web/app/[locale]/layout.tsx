@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AInsekt Farm — Circular Economy Reinvented",
-  description: "AInsekt Farm combines BSF + Cricket protein, renewable energy, BTC Mining, Token AINS and AgroAI Blockchain. Series Seed · 8–10M USD.",
+  title: "AInsekt Farm — Biogas 400 kW · FEnIKS · Poland",
+  description: "400 kW biogas CHP plant in Poland — 91% agricultural substrate · 15-year FIT · FEnIKS grant 85% · CAPEX €2.8M · COD September 2029. Optional Phase II (BSF insect farm) and Phase III (AI Compute).",
   metadataBase: new URL("https://ainsektfarm.com"),
   openGraph: {
-    title: "AInsekt Farm — Circular Economy Reinvented",
-    description: "BSF + Cricket · Renewable Energy · BTC Mining · Token AINS · AgroAI Blockchain.",
+    title: "AInsekt Farm — Biogas 400 kW · FEnIKS · Poland",
+    description: "400 kW biogas · 91% agricultural substrate · 15-year FIT · FEnIKS 85% (€2.38M) · Year 1 EBITDA €287K · Payback ~18 months · COD Sep 2029.",
     url: "https://ainsektfarm.com",
     siteName: "AInsekt Farm",
     images: [{ url: "/preview.webp", width: 1200, height: 630, alt: "AInsekt Farm" }],
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AInsekt Farm — Circular Economy Reinvented",
-    description: "BSF + Cricket · Renewable Energy · BTC Mining · Token AINS · AgroAI Blockchain.",
+    title: "AInsekt Farm — Biogas 400 kW · FEnIKS · Poland",
+    description: "400 kW biogas · 91% agricultural substrate · 15-year FIT · FEnIKS 85% · COD Sep 2029.",
     images: ["/preview.webp"],
   },
   icons: { icon: "/favicon.ico" },
