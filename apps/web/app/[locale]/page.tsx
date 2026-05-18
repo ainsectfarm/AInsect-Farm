@@ -117,20 +117,15 @@ export default function Home() {
           <p className="text-[#C7D2C9] text-lg leading-[1.7] mb-5 max-w-xl">{t("hero.desc")}</p>
           <p className="text-[#94A89A] text-sm leading-[1.7] mb-10 max-w-xl">{t("hero.subdesc")}</p>
 
-          {/* Wezwania do działania — biznes plan, partnerzy, demo aplikacji */}
+          {/* Wezwania do działania — partnerzy, demo aplikacji */}
           <div className="flex gap-3 flex-wrap mb-10">
             <a
-              href={t("hero.bpUrl")}
-              target="_blank"
-              rel="noopener"
+              href="#contact"
               className="bg-[#52A371] text-[#0a1410] font-bold px-8 py-3.5 hover:bg-[#3D7C57] hover:text-white transition-colors"
             >
-              {t("hero.btnDeck")}
-            </a>
-            <a href="#contact" className="border border-[#52A371]/35 text-[#F0F2EE] font-mono tracking-[0.15em] uppercase text-xs px-6 py-3.5 hover:border-[#52A371] hover:bg-[#52A371]/5 transition-colors">
               {t("hero.btnPartners")}
             </a>
-            <a href="/flik" className="text-[#52A371] font-mono tracking-[0.15em] uppercase text-xs px-3 py-3.5 hover:text-[#C8B68A] transition-colors">
+            <a href="/flik" className="border border-[#52A371]/35 text-[#F0F2EE] font-mono tracking-[0.15em] uppercase text-xs px-6 py-3.5 hover:border-[#52A371] hover:bg-[#52A371]/5 transition-colors">
               {t("hero.btnExplore")}
             </a>
           </div>
