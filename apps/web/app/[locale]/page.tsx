@@ -5,7 +5,7 @@ import HeroMascot from "../components/HeroMascot"
 import ScrollReveal from "../components/ScrollReveal"
 
 /**
- * Strona główna AInsekt Farm — biznes plan v3.2.
+ * Strona główna AInsekt Farm — biznes plan.
  * Paleta:
  *   - tło główne          #0a1410 (głęboki leśny atrament)
  *   - tło karty           #0f1813 (delikatnie podniesione)

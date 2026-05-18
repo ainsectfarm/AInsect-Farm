@@ -9,15 +9,15 @@
     "invest": "POROZMAWIAJMY →"
   },
   "hero": {
-    "badge": "Biznes plan v3.2 · Start Q2 2027 · Polska",
+    "badge": "Biznes plan · Start Q2 2027 · Polska",
     "title1": "Energia z odpadów.",
     "title2": "Białko z owadów.",
     "title3": "AI Compute.",
     "title4": "Jedna platforma.",
     "desc": "Budujemy w Polsce zintegrowaną instalację bioekonomii cyrkularnej: biogazownia 400 kW jako Faza I, z opcjonalnymi nadbudowami — fermą owadów BSF i centrum AI Compute.",
     "subdesc": "Stabilny, regulowany przychód z 15-letniej taryfy gwarantowanej · prosty model operacyjny · długoterminowe partnerstwo z lokalnymi gospodarstwami rolnymi.",
-    "btnDeck": "Otwórz biznes plan v3.2 →",
-    "bpUrl": "/biznes-plan-v3.2.html",
+    "btnDeck": "Otwórz biznes plan →",
+    "bpUrl": "/biznes-plan.html",
     "btnPartners": "Zostań partnerem",
     "btnExplore": "Wypróbuj aplikację FLIK →",
     "locCH": "🌿 Spółka celowa w Polsce",
@@ -186,11 +186,11 @@
     "title1": "Faza I broni się sama.",
     "title2": "Fazy II i III dają wzrost.",
     "desc": "AInsekt Farm Sp. z o.o. — biogazownia 400 kW jako niezależne, samofinansujące się aktywo. Z opcją rozszerzenia o farmę owadów BSF (Faza II) oraz centrum AI Compute (Faza III).",
-    "subdesc": "Pełen biznes plan v3.2, 15-letni model finansowy oraz analiza wrażliwości dostępne po podpisaniu umowy o zachowaniu poufności (NDA). Spotkania bezpośrednie preferowane.",
+    "subdesc": "Pełen biznes plan, 15-letni model finansowy oraz analiza wrażliwości dostępne po podpisaniu umowy o zachowaniu poufności (NDA). Spotkania bezpośrednie preferowane.",
     "partnership": "Zostań partnerem"
   },
   "footer": {
-    "copy": "© 2026 AInsekt Farm Sp. z o.o. · Polska · Biznes plan v3.2",
+    "copy": "© 2026 AInsekt Farm Sp. z o.o. · Polska · Biznes plan",
     "seed": "Faza I · Kapitał własny 450 tys. euro · Uruchomienie wrzesień 2029"
   }
 }

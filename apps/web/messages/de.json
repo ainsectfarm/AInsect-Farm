@@ -9,15 +9,15 @@
     "invest": "GESPRÄCH →"
   },
   "hero": {
-    "badge": "Businessplan v3.2 · Start Q2 2027 · Polen",
+    "badge": "Businessplan · Start Q2 2027 · Polen",
     "title1": "Energie aus Abfall.",
     "title2": "Protein aus Insekten.",
     "title3": "AI Compute.",
     "title4": "Eine Plattform.",
     "desc": "Wir bauen in Polen eine integrierte Anlage der zirkulären Bioökonomie: eine 400-kW-Biogasanlage als Phase I, mit optionalen Ausbaustufen — einer Black-Soldier-Fly-Insektenfarm und einem AI-Compute-Zentrum.",
     "subdesc": "Stabile, regulierte Einnahmen aus dem 15-jährigen Einspeisetarif · einfaches Betriebsmodell · langfristige Partnerschaften mit lokalen Landwirten.",
-    "btnDeck": "Businessplan v3.2 öffnen →",
-    "bpUrl": "/businessplan-v3.2-de.html",
+    "btnDeck": "Businessplan öffnen →",
+    "bpUrl": "/businessplan-de.html",
     "btnPartners": "Partner werden",
     "btnExplore": "FLIK App testen →",
     "locCH": "🌿 Polnische SPV",
@@ -186,11 +186,11 @@
     "title1": "Phase I trägt sich selbst.",
     "title2": "Phasen II und III sind Wachstum.",
     "desc": "AInsekt Farm Sp. z o.o. — 400-kW-Biogasanlage als eigenständiger, selbstfinanzierender Vermögenswert. Mit der Option zur Erweiterung um eine BSF-Insektenfarm (Phase II) und ein AI-Compute-Zentrum (Phase III).",
-    "subdesc": "Vollständiger Businessplan v3.2, 15-Jahres-Finanzmodell und Sensitivitätsanalyse nach Unterzeichnung einer Geheimhaltungsvereinbarung (NDA) verfügbar. Persönliche Treffen bevorzugt.",
+    "subdesc": "Vollständiger Businessplan, 15-Jahres-Finanzmodell und Sensitivitätsanalyse nach Unterzeichnung einer Geheimhaltungsvereinbarung (NDA) verfügbar. Persönliche Treffen bevorzugt.",
     "partnership": "Partner werden"
   },
   "footer": {
-    "copy": "© 2026 AInsekt Farm Sp. z o.o. · Polen · Businessplan v3.2",
+    "copy": "© 2026 AInsekt Farm Sp. z o.o. · Polen · Businessplan",
     "seed": "Phase I · Eigenkapital 450 T€ · Inbetriebnahme September 2029"
   }
 }

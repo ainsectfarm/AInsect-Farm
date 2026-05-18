@@ -9,15 +9,15 @@
     "invest": "GET IN TOUCH →"
   },
   "hero": {
-    "badge": "Business plan v3.2 · Start Q2 2027 · Poland",
+    "badge": "Business plan · Start Q2 2027 · Poland",
     "title1": "Energy from waste.",
     "title2": "Protein from insects.",
     "title3": "AI Compute.",
     "title4": "One platform.",
     "desc": "We are building an integrated circular bioeconomy facility in Poland: a 400 kW biogas plant as Phase I, with optional extensions — a Black Soldier Fly insect farm and an AI Compute centre.",
     "subdesc": "Stable, regulated revenue from a 15-year feed-in tariff · simple operating model · long-term partnerships with local farms.",
-    "btnDeck": "Open Business Plan v3.2 →",
-    "bpUrl": "/business-plan-v3.2-en.html",
+    "btnDeck": "Open Business Plan →",
+    "bpUrl": "/business-plan-en.html",
     "btnPartners": "Become a partner",
     "btnExplore": "Try the FLIK app →",
     "locCH": "🌿 Polish SPV",
@@ -186,11 +186,11 @@
     "title1": "Phase I defends itself.",
     "title2": "Phases II and III give the upside.",
     "desc": "AInsekt Farm Sp. z o.o. — a 400 kW biogas plant as a standalone, self-financing asset. With the option to expand into a Black Soldier Fly insect farm (Phase II) and an AI Compute centre (Phase III).",
-    "subdesc": "Full Business Plan v3.2, 15-year financial model and sensitivity analysis available after signing a non-disclosure agreement (NDA). In-person meetings preferred.",
+    "subdesc": "Full Business Plan, 15-year financial model and sensitivity analysis available after signing a non-disclosure agreement (NDA). In-person meetings preferred.",
     "partnership": "Become a partner"
   },
   "footer": {
-    "copy": "© 2026 AInsekt Farm Sp. z o.o. · Poland · Business plan v3.2",
+    "copy": "© 2026 AInsekt Farm Sp. z o.o. · Poland · Business plan",
     "seed": "Phase I · Equity €450K · Commissioning September 2029"
   }
 }
