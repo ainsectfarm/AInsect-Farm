@@ -1,11 +1,24 @@
 {
   "nav": {
     "flik": "FLIK App",
+    "vision": "Project goal",
     "energy": "Energy",
     "token": "Financing",
     "roadmap": "Roadmap",
     "projection": "Phase I",
-    "invest": "INVEST →"
+    "invest": "GET IN TOUCH →"
+  },
+  "vision": {
+    "label": "Business goal",
+    "title": "What we build",
+    "titleGreen": "and why.",
+    "intro": "AInsekt Farm is a long-term infrastructure venture in the renewable energy and circular bioeconomy sectors. We are not chasing quick returns — we are building an asset that generates stable, regulated revenue for 15 years and creates real value for local agriculture.",
+    "goalTitle": "Goal",
+    "goalDesc": "Build and commission a standalone 400 kW biogas CHP plant by September 2029 — generating 2,452 MWh per year of controllable 24/7 baseload, independent of weather.",
+    "missionTitle": "Mission",
+    "missionDesc": "Close the loop of organic waste in Polish agriculture. Every ton of substrate from a local farm — potatoes, silage, apples — becomes energy, heat and organic fertilizer that returns to the same fields.",
+    "visionTitle": "Vision",
+    "visionDesc": "A network of sister SPVs across Poland — each biogas plant a standalone, self-financing unit. Poland as the reference market for scaling the model across Central Europe through 2030 and beyond."
   },
   "hero": {
     "badge": "Business Plan v3.2 · May 2026 · Project start Q2 2027",

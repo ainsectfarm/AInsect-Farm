@@ -1,11 +1,24 @@
 {
   "nav": {
     "flik": "FLIK App",
+    "vision": "Projektziel",
     "energy": "Energie",
     "token": "Finanzierung",
     "roadmap": "Roadmap",
     "projection": "Phase I",
-    "invest": "INVESTIEREN →"
+    "invest": "GESPRÄCH →"
+  },
+  "vision": {
+    "label": "Geschäftsziel",
+    "title": "Was wir bauen",
+    "titleGreen": "und warum.",
+    "intro": "AInsekt Farm ist ein langfristiges Infrastrukturvorhaben im Bereich erneuerbare Energien und Kreislaufbioökonomie. Wir streben keine schnellen Renditen an — wir bauen einen Vermögenswert, der über 15 Jahre stabile, regulierte Einnahmen generiert und einen echten Mehrwert für die lokale Landwirtschaft schafft.",
+    "goalTitle": "Ziel",
+    "goalDesc": "Bau und Inbetriebnahme einer 400-kW-Biogas-KWK-Anlage bis September 2029 — mit 2.452 MWh pro Jahr regelbarer Grundlast, rund um die Uhr verfügbar, wetterunabhängig.",
+    "missionTitle": "Mission",
+    "missionDesc": "Den Stoffstrom organischer Abfälle in der polnischen Landwirtschaft schließen. Jede Tonne Substrat aus lokalen Höfen — Kartoffeln, Silage, Äpfel — wird zu Energie, Wärme und organischem Dünger, der auf dieselben Felder zurückkehrt.",
+    "visionTitle": "Vision",
+    "visionDesc": "Ein Netzwerk von Schwester-SPVs in Polen — jede Biogasanlage als eigenständige, selbstfinanzierende Einheit. Polen als Referenzmarkt für die Skalierung des Modells in Mitteleuropa ab 2030."
   },
   "hero": {
     "badge": "Businessplan v3.2 · Mai 2026 · Projektstart Q2 2027",

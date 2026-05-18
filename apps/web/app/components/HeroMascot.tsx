@@ -44,20 +44,22 @@ export default function HeroMascot() {
       className="pointer-events-none absolute inset-0 flex items-center justify-center"
       aria-hidden="true"
     >
-      {/* Glow rękojeściowy — większy ruch */}
+      {/* Miękka poświata zielona — subtelna, profesjonalna (nie neon) */}
       <div
-        className="absolute w-[28rem] h-[28rem] rounded-full bg-[#00FF88]/10 blur-3xl"
+        className="absolute w-[28rem] h-[28rem] rounded-full bg-[#52A371]/8 blur-3xl"
         style={{
           transform: `translate3d(${offset.x * 2}px, ${offset.y * 2}px, 0)`,
           transition: "transform 200ms cubic-bezier(0.22, 1, 0.36, 1)",
         }}
       />
-      {/* Mascot — mniejszy ruch (bliżej kamery) */}
+      {/* Maskotka — przycięta przez overflow-hidden żeby ukryć fioletową ramkę z JPG */}
       <div
-        className="relative z-10"
+        className="relative z-10 overflow-hidden rounded-3xl"
         style={{
           transform: `translate3d(${offset.x}px, ${offset.y}px, 0)`,
           transition: "transform 200ms cubic-bezier(0.22, 1, 0.36, 1)",
+          width: "340px",
+          height: "458px",
         }}
       >
         <Image
@@ -66,8 +68,12 @@ export default function HeroMascot() {
           width={360}
           height={486}
           priority
-          className="opacity-95 drop-shadow-[0_0_40px_rgba(0,255,136,0.35)]"
-          style={{animation: "float 6s ease-in-out infinite"}}
+          className="opacity-95"
+          style={{
+            animation: "float 6s ease-in-out infinite",
+            transform: "scale(1.08)",
+            transformOrigin: "center center",
+          }}
         />
       </div>
     </div>
