@@ -108,10 +108,11 @@ export default function Home() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#52A371] animate-pulse"/>
             {t("hero.badge")}
           </div>
-          <h1 className="text-5xl md:text-[64px] font-black leading-[1.05] tracking-[-0.02em] mb-7">
+          <h1 className="text-5xl md:text-[60px] font-black leading-[1.05] tracking-[-0.02em] mb-7">
             {t("hero.title1")}{" "}
             <span className="text-[#94A89A]">{t("hero.title2")}</span>{" "}
-            <span className="text-[#52A371]">{t("hero.title3")}</span>
+            <span className="text-[#C8B68A]">{t("hero.title3")}</span>{" "}
+            <span className="text-[#52A371]">{t("hero.title4")}</span>
           </h1>
           <p className="text-[#C7D2C9] text-lg leading-[1.7] mb-5 max-w-xl">{t("hero.desc")}</p>
           <p className="text-[#94A89A] text-sm leading-[1.7] mb-10 max-w-xl">{t("hero.subdesc")}</p>
@@ -119,7 +120,7 @@ export default function Home() {
           {/* Wezwania do działania — biznes plan, partnerzy, demo aplikacji */}
           <div className="flex gap-3 flex-wrap mb-10">
             <a
-              href="/biznes-plan-v3.2.html"
+              href={t("hero.bpUrl")}
               target="_blank"
               rel="noopener"
               className="bg-[#52A371] text-[#0a1410] font-bold px-8 py-3.5 hover:bg-[#3D7C57] hover:text-white transition-colors"
