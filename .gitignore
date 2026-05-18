@@ -1,9 +1,7 @@
 # Dependencies
 node_modules/
 .pnpm-store/
-pnpm-lock.yaml
 pnpm-workspace.yaml.bak
-.npmrc
 
 # Next.js
 .next/
@@ -16,7 +14,10 @@ __pycache__/
 **/*.pyc
 *.pyo
 venv/
+.venv/
 .env
+.env.*
+!.env.example
 .env.local
 .env.docker
 
@@ -27,5 +28,30 @@ build/
 # OS
 .DS_Store
 *.log
+*.err
 Thumbs.db
 blockchain/.env*
+
+# Secrets / keys
+*.key
+*.pem
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+*.crt
+*.csr
+
+# Archives / backups
+*.tar.gz
+*.tar.bz2
+*.zip
+backup-*.sql.gz
+*.bak
+*.save
+
+# Sensitive — NIGDY (audit 2026-05-16)
+docs/STATUS*.md
+docs/FINAL_*.md
+blockchain/ignition/deployments/
+*.bytecode

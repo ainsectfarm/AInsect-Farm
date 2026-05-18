@@ -22,7 +22,7 @@ app = FastAPI(
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
-ALLOWED_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://192.168.1.108:3000").split(",")
+ALLOWED_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
 
 app.add_middleware(CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,

@@ -162,11 +162,11 @@ export default function PresaleSection() {
                 ["⚖️","Compliance",
                   "Estonia OÜ · MiCA utility token design · Legal opinion przed każdym etapem · Przedsprzedaż min. 18M przed public launch."],
                 ["₿","BTC Backing",
-                  "Skarbiec BTC farmy stanowi dodatkowy backing ekosystemu. Widoczny on-chain. BTC nie jest sprzedawany — strategiczny HODL."],
+                  "Skarbiec BTC farmy stanowi dodatkowy backing ekosystemu. Widoczny on-chain. BTC nabywane z 20% profitów i HODL w Strategic Reserve."],
                 ["🗳️","Governance",
                   "Posiadacze AINS głosują nad treasury, rozwojem No-Waste App i ekspansją. Quorum: 10% supply. 1 token = 1 głos."],
                 ["💰","Staking",
-                  "Revenue sharing kwartalny z farmy: mining + mączka + energia. APY zależy od produkcji — brak syntetycznego yield."],
+                  "Revenue sharing kwartalny z farmy: AI Compute + mączka + energia. 20% zysku idzie na BTC Strategic Reserve — brak syntetycznego yield."],
               ].map(([icon, title, desc]) => (
                 <div key={title as string} className="flex gap-3">
                   <span className="text-lg mt-0.5">{icon}</span>

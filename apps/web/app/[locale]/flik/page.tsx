@@ -8,7 +8,7 @@ import {
   Globe, WifiOff, X
 } from "lucide-react"
 
-const API = "http://192.168.1.108:8001"
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001"
 const COLORS = {
   green: "#32D74B", blue: "#0A84FF", carbon: "#1D1D1F",
   white: "#F5F5F7", gray: "#8E8E93",

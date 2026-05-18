@@ -1,27 +1,28 @@
 import Image from "next/image"
 import {useTranslations} from "next-intl"
 import LanguageSwitcher from "../components/LanguageSwitcher"
+import HeroMascot from "../components/HeroMascot"
 
 export default function Home() {
   const t = useTranslations()
 
   const metricsData: [string, string, string][] = [
-    [t("metrics.valuation"), "20–28M USD", "#00FF88"],
-    [t("metrics.supply"), "100M tokens", "white"],
-    [t("metrics.btcMining"), "50% energy → HODL", "#F7931A"],
-    [t("metrics.aiCompute"), "50% energy → B2B", "#4488ff"],
-    [t("metrics.heatRecovery"), "Free farm heating", "#00FF88"],
-    [t("metrics.irr"), "18–30%", "white"],
-    [t("metrics.domicile"), "Switzerland GmbH", "#00FF88"],
+    [t("metrics.valuation"), "€2.8M", "white"],
+    [t("metrics.supply"), "€2.38M", "#00FF88"],
+    [t("metrics.btcMining"), "€450K", "#F5A623"],
+    [t("metrics.aiCompute"), "€287K", "#00FF88"],
+    [t("metrics.heatRecovery"), "91% · 5 500 t", "#00FF88"],
+    [t("metrics.irr"), "~18 mies.", "white"],
+    [t("metrics.domicile"), "€2.2M · 4.9×", "#00FF88"],
   ]
 
   const streamsData: [string, string, string][] = [
-    ["🌱", t("streams.flik"), t("streams.flikDesc")],
-    ["🦟", t("streams.bsf"), t("streams.bsfDesc")],
-    ["₿", t("streams.btc"), t("streams.btcDesc")],
-    ["🖥️", t("streams.ai"), t("streams.aiDesc")],
-    ["⚡", t("streams.biogas"), t("streams.biogasDesc")],
-    ["🌡️", t("streams.heat"), t("streams.heatDesc")],
+    ["⚡", t("streams.flik"), t("streams.flikDesc")],
+    ["🇪🇺", t("streams.bsf"), t("streams.bsfDesc")],
+    ["🌾", t("streams.btc"), t("streams.btcDesc")],
+    ["📱", t("streams.ai"), t("streams.aiDesc")],
+    ["🦟", t("streams.biogas"), t("streams.biogasDesc")],
+    ["🖥️", t("streams.heat"), t("streams.heatDesc")],
   ]
 
   const usersData: [string, string, string][] = [
@@ -33,18 +34,14 @@ export default function Home() {
   ]
 
   const tokenAlloc: [string, number][] = [
-    [t("token.allocDev"), 40],
-    [t("token.allocTreasury"), 20],
-    [t("token.allocLiquidity"), 15],
-    [t("token.allocStaking"), 10],
-    [t("token.allocChain"), 5],
-    [t("token.allocRewards"), 5],
-    [t("token.allocTeam"), 5],
+    [t("token.allocDev"), 85],
+    [t("token.allocTreasury"), 10],
+    [t("token.allocLiquidity"), 5],
   ]
 
   const roadmapData: [string, string, string, boolean][] = [
-    [t("roadmap.p1"), t("roadmap.p1Title"), t("roadmap.p1Desc"), true],
-    [t("roadmap.p2"), t("roadmap.p2Title"), t("roadmap.p2Desc"), true],
+    [t("roadmap.p1"), t("roadmap.p1Title"), t("roadmap.p1Desc"), true],  // current — active
+    [t("roadmap.p2"), t("roadmap.p2Title"), t("roadmap.p2Desc"), false],
     [t("roadmap.p3"), t("roadmap.p3Title"), t("roadmap.p3Desc"), false],
     [t("roadmap.p4"), t("roadmap.p4Title"), t("roadmap.p4Desc"), false],
     [t("roadmap.p5"), t("roadmap.p5Title"), t("roadmap.p5Desc"), false],
@@ -56,7 +53,7 @@ export default function Home() {
       {/* NAV */}
       <nav className="sticky top-0 z-50 flex items-center justify-between px-8 py-4 bg-[#050508]/95 backdrop-blur border-b border-[#00FF88]/10">
         <div className="flex items-center gap-3">
-          <Image src="/mascot.jpg" alt="AInsekt" width={32} height={32} className="rounded-full border border-[#00FF88]/30" />
+          <Image src="/mascot.jpg" alt="AInsekt" width={32} height={32} className="rounded-full border border-[#00FF88]/30 object-cover object-top" />
           <span className="font-black text-xl tracking-tight">
             AI<span className="text-[#00FF88]">nsekt</span> Farm
           </span>
@@ -76,40 +73,62 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative px-8 py-28 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        {/* Grid background */}
         <div className="absolute inset-0 opacity-5 pointer-events-none"
           style={{backgroundImage:"linear-gradient(#00FF88 1px,transparent 1px),linear-gradient(90deg,#00FF88 1px,transparent 1px)",backgroundSize:"40px 40px"}}/>
-        <div className="relative">
+
+        {/* LEFT: copy + CTAs */}
+        <div className="relative z-10">
           <div className="inline-flex items-center gap-2 text-[#00FF88] text-xs font-mono tracking-widest uppercase border border-[#00FF88]/20 px-3 py-1.5 mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00FF88] animate-pulse"/>
             {t("hero.badge")}
           </div>
-          <h1 className="text-6xl md:text-7xl font-black leading-[0.9] tracking-tighter mb-6">
-            {t("hero.title1")}<br/>{t("hero.title2")}<br/><span className="text-[#00FF88]">{t("hero.title3")}</span>
+          <h1 className="text-5xl md:text-6xl font-black leading-[1.05] tracking-tighter mb-6">
+            {t("hero.title1")}{" "}
+            <span className="text-[#666677]">{t("hero.title2")}</span>{" "}
+            <span className="text-[#00FF88]">{t("hero.title3")}</span>
           </h1>
-          <p className="text-[#666677] text-lg leading-relaxed mb-4 max-w-lg">{t("hero.desc")}</p>
-          <p className="text-[#666677] text-sm leading-relaxed mb-8 max-w-lg">{t("hero.subdesc")}</p>
+          <p className="text-[#aaaabb] text-lg leading-relaxed mb-4 max-w-xl">{t("hero.desc")}</p>
+          <p className="text-[#666677] text-sm leading-relaxed mb-8 max-w-xl">{t("hero.subdesc")}</p>
+
+          {/* 3 CTAs — per persona (investor / partner / user) */}
           <div className="flex gap-3 flex-wrap mb-8">
-            <a href="#contact" className="bg-[#00FF88] text-[#050508] font-black px-8 py-3 hover:bg-[#00CC66] transition">{t("hero.btnDeck")}</a>
-            <a href="#flik" className="border border-[#00FF88]/20 text-white text-xs font-mono tracking-widest uppercase px-6 py-3 hover:border-[#00FF88] transition">{t("hero.btnExplore")}</a>
+            <a href="#contact" className="bg-[#00FF88] text-[#050508] font-black px-8 py-3 hover:bg-[#00CC66] transition">
+              {t("hero.btnDeck")}
+            </a>
+            <a href="#contact" className="border border-[#00FF88]/30 text-white font-mono tracking-widest uppercase text-xs px-6 py-3 hover:border-[#00FF88] hover:bg-[#00FF88]/5 transition">
+              {t("hero.btnPartners")}
+            </a>
+            <a href="/flik" className="text-[#00FF88] font-mono tracking-widest uppercase text-xs px-2 py-3 hover:text-[#00CC66] transition">
+              {t("hero.btnExplore")}
+            </a>
           </div>
+
           <div className="flex gap-6 text-xs font-mono text-[#666677]">
             <span>🇨🇭 {t("hero.locCH")}</span>
             <span>🇺🇦 {t("hero.locUA")}</span>
             <span>🌍 {t("hero.locGlobal")}</span>
           </div>
         </div>
-        <div className="bg-[#080f08] border border-[#00FF88]/10 p-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00FF88] to-transparent"/>
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#00FF88]/3 rounded-full blur-2xl"/>
-          <div className="font-mono text-[#00FF88] text-xs tracking-widest uppercase mb-6">{t("metrics.title")}</div>
-          {metricsData.map(([label,value,color])=>(
-            <div key={label} className="flex justify-between items-center py-3 border-b border-[#00FF88]/5 last:border-0">
-              <span className="text-[#666677] text-sm">{label}</span>
-              <span className="font-black font-mono text-sm" style={{color}}>{value}</span>
-            </div>
-          ))}
-          <div className="mt-6 flex justify-center">
-            <Image src="/mascot.jpg" alt="FLIK" width={80} height={100} className="opacity-80" style={{animation:"float 4s ease-in-out infinite"}}/>
+
+        {/* RIGHT: Mascot + metrics card */}
+        <div className="relative">
+          {/* Parallax mascot za kartą metryk */}
+          <div className="absolute inset-0 -z-0">
+            <HeroMascot />
+          </div>
+
+          {/* Metrics card — z glassmorphism żeby mascot prześwitywał */}
+          <div className="relative z-10 bg-[#080f08]/80 backdrop-blur-md border border-[#00FF88]/20 p-8 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00FF88] to-transparent"/>
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#00FF88]/5 rounded-full blur-2xl"/>
+            <div className="font-mono text-[#00FF88] text-xs tracking-widest uppercase mb-6">{t("metrics.title")}</div>
+            {metricsData.map(([label,value,color])=>(
+              <div key={label} className="flex justify-between items-center py-3 border-b border-[#00FF88]/5 last:border-0">
+                <span className="text-[#aaaabb] text-sm">{label}</span>
+                <span className="font-black font-mono text-sm" style={{color}}>{value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -118,7 +137,7 @@ export default function Home() {
       <div className="border-y border-[#00FF88]/10 bg-[#080f08] py-3 overflow-hidden">
         <div className="flex gap-16 w-max" style={{animation:"ticker 40s linear infinite"}}>
           {[...Array(2)].flatMap((_,i)=>
-            ["FLIK APP","BSF PROTEIN","CRICKET EU NOVEL FOOD","BTC RESERVE","AI COMPUTE CENTER","HEAT RECOVERY","AINS TOKEN","AGROAI CHAIN","ZERO WASTE NFT","FINMA SWITZERLAND","QUANTUM READY","GREEN POINTS"].map(txt=>(
+            ["BIOGAZ 400 KW","FIT 15 LAT","FEnIKS 85%","91% SUBSTRAT ROLNICZY","CSTR HEC","SP. Z O.O.","COD IX 2029","DZ.U. 2023/2440","WFOŚIGW","DUŚ","FLIK APP LIVE","FAZA II BSF","FAZA III AI COMPUTE","PLAN B 199 KW"].map(txt=>(
               <span key={`${i}-${txt}`} className="font-mono text-[#00FF88] text-xs tracking-widest uppercase whitespace-nowrap">◆ {txt}</span>
             ))
           )}
@@ -172,10 +191,10 @@ export default function Home() {
             <div className="font-mono text-[#00FF88] text-xs tracking-widest uppercase mb-4">{t("energy.calcTitle")}</div>
             <div className="grid md:grid-cols-4 gap-6">
               {([
-                ["950 kW",t("energy.calcThermal")],
-                ["0 USD",t("energy.calcCost")],
-                ["~30%",t("energy.calcOpex")],
-                ["120k USD",t("energy.calcSavings")],
+                ["2 452",t("energy.calcThermal")],
+                ["5 500",t("energy.calcCost")],
+                ["91%",t("energy.calcOpex")],
+                ["€565K",t("energy.calcSavings")],
               ] as [string,string][]).map(([val,lbl])=>(
                 <div key={lbl} className="text-center">
                   <div className="text-3xl font-black text-[#00FF88] mb-1">{val}</div>
@@ -253,12 +272,12 @@ export default function Home() {
             </div>
             <div className="space-y-3">
               {([
-                ["🌱",t("token.gpRewardsTitle"),t("token.gpRewardsDesc")],
-                ["💰",t("token.stakingTitle"),t("token.stakingDesc")],
-                ["₿",t("token.btcTitle"),t("token.btcDesc")],
-                ["🌍",t("token.daoTitle"),t("token.daoDesc")],
-                ["🖥️",t("token.computeTitle"),t("token.computeDesc")],
-                ["🎁",t("token.discountTitle"),t("token.discountDesc")],
+                ["🏛️",t("token.gpRewardsTitle"),t("token.gpRewardsDesc")],
+                ["🏦",t("token.stakingTitle"),t("token.stakingDesc")],
+                ["🔄",t("token.btcTitle"),t("token.btcDesc")],
+                ["🇪🇺",t("token.daoTitle"),t("token.daoDesc")],
+                ["🧪",t("token.computeTitle"),t("token.computeDesc")],
+                ["💶",t("token.discountTitle"),t("token.discountDesc")],
               ] as [string,string,string][]).map(([icon,title,desc])=>(
                 <div key={title} className="flex gap-3 p-4 border border-[#00FF88]/8 hover:border-[#00FF88]/25 transition">
                   <span className="text-base">{icon}</span>
@@ -305,9 +324,9 @@ export default function Home() {
           <h2 className="text-5xl font-black tracking-tight mb-12">{t("legal.title")} <span className="text-[#00FF88]">{t("legal.titleGreen")}</span> {t("legal.titleEnd")}</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {([
-              ["🇨🇭",t("legal.chName"),t("legal.chDesc")],
-              ["🇺🇦",t("legal.uaName"),t("legal.uaDesc")],
-              ["🇵🇱",t("legal.plName"),t("legal.plDesc")],
+              ["🏢",t("legal.chName"),t("legal.chDesc")],
+              ["⚖️",t("legal.uaName"),t("legal.uaDesc")],
+              ["🌾",t("legal.plName"),t("legal.plDesc")],
             ] as [string,string,string][]).map(([flag,name,desc])=>(
               <div key={name} className="border border-[#00FF88]/10 p-8 hover:border-[#00FF88]/30 transition">
                 <div className="text-4xl mb-4">{flag}</div>
@@ -337,7 +356,7 @@ export default function Home() {
       <section id="contact" className="py-24 px-8">
         <div className="max-w-2xl mx-auto text-center">
           <div className="flex justify-center mb-8">
-            <Image src="/mascot.jpg" alt="FLIK" width={100} height={125} className="drop-shadow-2xl" style={{animation:"float 4s ease-in-out infinite"}}/>
+            <Image src="/mascot.jpg" alt="FLIK" width={135} height={180} className="drop-shadow-2xl" style={{animation:"float 4s ease-in-out infinite"}}/>
           </div>
           <div className="font-mono text-[#00FF88] text-xs tracking-widest uppercase mb-4">{t("contact.label")}</div>
           <h2 className="text-6xl font-black tracking-tight mb-4 leading-[0.9]">{t("contact.title1")}<br/><span className="text-[#00FF88]">{t("contact.title2")}</span></h2>
@@ -355,7 +374,7 @@ export default function Home() {
             <a href="https://t.me/AInsectFarm" className="hover:text-[#00FF88] transition">Telegram</a>
             <a href="https://twitter.com/AInsectFarm" className="hover:text-[#00FF88] transition">Twitter/X</a>
             <a href="https://github.com/ainsectfarm" className="hover:text-[#00FF88] transition">GitHub</a>
-            <a href="https://twitter.com/AgroAIChain" className="hover:text-[#00FF88] transition">AgroAI Chain</a>
+            <a href="https://www.ainsectfarm.com" className="hover:text-[#00FF88] transition">FLIK App</a>
           </div>
         </div>
       </section>
@@ -364,7 +383,7 @@ export default function Home() {
       <footer className="border-t border-[#00FF88]/10 px-8 py-8">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center gap-3">
-            <Image src="/mascot.jpg" alt="FLIK" width={28} height={28} className="rounded-full border border-[#00FF88]/30"/>
+            <Image src="/mascot.jpg" alt="FLIK" width={28} height={28} className="rounded-full border border-[#00FF88]/30 object-cover object-top"/>
             <span className="font-black text-lg">AI<span className="text-[#00FF88]">nsekt</span> Farm</span>
           </div>
           <span className="font-mono text-xs text-[#333344]">{t("footer.copy")}</span>
