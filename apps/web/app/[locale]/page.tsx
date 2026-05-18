@@ -118,7 +118,12 @@ export default function Home() {
 
           {/* Wezwania do działania — biznes plan, partnerzy, demo aplikacji */}
           <div className="flex gap-3 flex-wrap mb-10">
-            <a href="#contact" className="bg-[#52A371] text-[#0a1410] font-bold px-8 py-3.5 hover:bg-[#3D7C57] hover:text-white transition-colors">
+            <a
+              href="/biznes-plan-v3.2.html"
+              target="_blank"
+              rel="noopener"
+              className="bg-[#52A371] text-[#0a1410] font-bold px-8 py-3.5 hover:bg-[#3D7C57] hover:text-white transition-colors"
+            >
               {t("hero.btnDeck")}
             </a>
             <a href="#contact" className="border border-[#52A371]/35 text-[#F0F2EE] font-mono tracking-[0.15em] uppercase text-xs px-6 py-3.5 hover:border-[#52A371] hover:bg-[#52A371]/5 transition-colors">
